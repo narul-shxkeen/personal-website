@@ -30,13 +30,22 @@ function Landing() {
           <span className={`inline-block ${isFalling ? 'fall-back' : 'appear'}`}>{roles[currentRoleIndex]}</span>
         </span>
       </p>
-      <div className="flex rounded-full nav px-4 py-2 absolute bottom-9">
-      <div className="flex gap-6 items-center">
+      <div className="flex rounded-full nav absolute bottom-9">
+      <div className="flex gap-4 items-center">
         <a href="mailto:shokeenvaibhav280@gmail.com" className="p-0 m-0">
-         <EmailIcon fontSize="large"/>
-         </a>
-         <a href="https://github.com/narul-shxkeen"><GitHubIcon fontSize="large"/></a>
-        <a href="https://www.linkedin.com/in/vaibhav-shokeen-878275225/"><LinkedInIcon fontSize="large"/></a>
+        <div className="inline-block p-2 hover:text-white hover:bg-black rounded-full">
+    <EmailIcon fontSize="large" className="mx-1 my-1 poppins-semibold"/>
+  </div>
+         </a><a href="https://github.com/narul-shxkeen">
+  <div className="inline-block p-2 hover:text-white hover:bg-black rounded-full">
+    <GitHubIcon fontSize="large" className="mx-1 my-1 poppins-semibold"/>
+  </div>
+</a>
+        <a href="https://www.linkedin.com/in/vaibhav-shokeen-878275225/">
+        <div className="inline-block p-2 hover:text-white hover:bg-black rounded-full">
+    <LinkedInIcon fontSize="large" className="mx-1 my-1 poppins-semibold"/>
+  </div>
+        </a>
         </div>
       </div>
     </div>
