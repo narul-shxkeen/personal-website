@@ -15,8 +15,8 @@ function Landing({isBlurred}) {
       setTimeout(() => {
         setCurrentRoleIndex(prevIndex => (prevIndex + 1) % roles.length);
         setIsFalling(false);
-      }, 1000); // Duration of the fall-back animation
-    }, 2000); // Change text every 2 seconds
+      }, 1500); // Duration of the fall-back animation
+    }, 3000); // Change text every 2 seconds
 
     return () => clearInterval(interval);
   }, []);
