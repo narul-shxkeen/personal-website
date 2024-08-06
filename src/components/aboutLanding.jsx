@@ -4,10 +4,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Landing(){
- return <div className="h-[100vh] w-[100vw] mb-20 grid grid-cols-4 grid-rows-5 justify-items-center justify-center gap-4 items-center px-20 pt-24">
- <div className="bg-white col-span-1 row-span-2 h-[100%] w-full flex justify-center items-center rounded-xl">
-    <img src="images/squarePfp.jpeg" alt="image of software engineer Vaibhav Shokeen standing on a bridge" className="h-full w-full rounded-xl object-cover"/></div>
- <div className="bg-white col-span-3 row-span-2 h-[100%] w-full flex pl-4 items-center rounded-xl">
+ return <div className="h-auto w-[100vw] md:h-[100vh] md:w-[100vw] mb-20 grid grid-cols-1 md:grid-cols-4 md:grid-rows-5 justify-items-center justify-center gap-4 items-center px-20 pt-24">
+ <div className="bg-white md:col-span-1 md:row-span-2 h-[30vh] md:h-[100%] w-full flex justify-center items-center rounded-xl">
+    <img src="images/squarePfp.jpeg" alt="image of software engineer Vaibhav Shokeen standing on a bridge" className="md:h-full md:w-full rounded-xl object-cover"/></div>
+ <div className="bg-white md:col-span-3 md:row-span-2 h-[100%] w-full flex pl-4 items-center rounded-xl">
     <h1 className="poppins-bold text-4xl text-[#b9b9b9] leading-relaxed">Hey there!<br/> I am <span className=" text-6xl text-[#578b73] poppins-bold">Vaibhav Shokeen</span>.</h1>
     </div>
     <div className="bg-white col-span-4 row-span-3 h-[100%] w-full flex  flex-col gap-3 px-4 py-8 rounded-xl">

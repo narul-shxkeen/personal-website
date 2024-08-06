@@ -4,7 +4,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-function Landing() {
+function Landing({isBlurred}) {
   const roles = ['Developer', 'Machine Learner', 'Health Researcher'];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isFalling, setIsFalling] = useState(false);
@@ -22,10 +22,11 @@ function Landing() {
   }, []);
 
   return (
+    <div className="h-full w-ful">
     <div className="flex flex-col gap-4 justify-center items-center h-[100vh] w-[100vw]">
       <img className="absolute -z-10 object-cover h-[100vh] w-[100vw]" src="images/home2.jpg" alt="image of raindrops on a leaf with a blurred background" />
-      <h1 className="text-7xl text-white poppins-bold z-10">Vaibhav Shokeen</h1>
-      <p className="relative text-5xl text-[#b9b9b9] poppins-medium">
+      <h1 className="text-7xl text-white poppins-bold z-10 text-center">Vaibhav Shokeen</h1>
+      <p className="relative text-5xl text-[#b9b9b9] poppins-medium text-center">
         I am a <span className="inline-block w-[450px]">
           <span className={`inline-block ${isFalling ? 'fall-back' : 'appear'}`}>{roles[currentRoleIndex]}</span>
         </span>
@@ -48,6 +49,7 @@ function Landing() {
         </a>
         </div>
       </div>
+    </div>
     </div>
   );
 }
