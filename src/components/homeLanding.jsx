@@ -26,8 +26,7 @@ function Landing({ isBlurred }) {
       <div className="flex flex-col gap-4 justify-center items-center h-[100vh] w-[100vw]">
         <img
           className="absolute -z-10 object-cover h-[100vh] w-[100vw]"
-          src="https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          // src="https://images.unsplash.com/photo-1564577159764-54b5d18f1096?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         src="https://images.unsplash.com/photo-1564577159764-54b5d18f1096?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="image of raindrops on a leaf with a blurred background"
         />
         <h1 className="text-4xl sm:text-7xl text-white poppins-bold z-10 text-center px-4 md:px-0">
