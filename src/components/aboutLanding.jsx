@@ -4,7 +4,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Landing(){
- return <div className="h-auto w-[100vw] mb-20 flex flex-col md:grid md:grid-cols-4 md:grid-rows-5 md:justify-items-center justify-center gap-4 items-center md:px-20 md:pt-24 px-6 pt-6">
+ return <div className="h-auto w-[100vw] mb-20 flex flex-col md:grid md:grid-cols-4 md:grid-rows-5 md:justify-items-center justify-center gap-4 items-center pt-20 md:px-20 md:pt-24 px-6">
  <div className="md:bg-white md:col-span-1 md:row-span-2 h-auto md:h-[100%] w-full flex justify-center items-center rounded-xl">
     <img src="images/squarePfp.jpeg" alt="image of software engineer Vaibhav Shokeen standing on a bridge" className="h-full w-auto rounded-xl object-cover"/></div>
  <div className="bg-white md:col-span-3 md:row-span-2 h-[100%] w-full flex py-4 md:py-0 pl-4 items-center rounded-xl">

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const NavItem = ({ to, children, onClick }) => (
+const NavItem = ({ to, children, onClick, isMobile }) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
@@ -10,7 +10,7 @@ const NavItem = ({ to, children, onClick }) => (
         isActive
           ? 'text-white bg-[#97bfad]'
           : 'text-gray-700 hover:text-white hover:bg-gray-700'
-      } px-3 py-2 rounded-md text-sm md:text-base transition duration-300 ease-in-out`
+      } px-3 py-2 rounded-md text-sm md:text-base transition duration-300 ease-in-out ${isMobile ? 'inline-block' : ''}`
     }
     onClick={onClick}
   >
@@ -21,6 +21,7 @@ const NavItem = ({ to, children, onClick }) => (
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +33,19 @@ export default function Navbar() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -50,13 +64,13 @@ export default function Navbar() {
 
   return (
     <div className="w-full fixed z-30 md:top-6 flex justify-center">
-      <nav className="nav shadow-md w-full md:w-auto rounded-none md:rounded-full">
+      <nav ref={navRef} className="nav shadow-md w-full md:w-auto rounded-none md:rounded-full">
         <div className="w-auto px-8 ">
           <div className="flex items-center justify-between h-16">
             <div className="hidden md:block w-full">
               <div className="flex justify-center gap-2">
                 {navItems.map((item) => (
-                  <NavItem key={item.to} to={item.to}>
+                  <NavItem key={item.to} to={item.to} isMobile={false}>
                     {item.label}
                   </NavItem>
                 ))}
@@ -65,7 +79,7 @@ export default function Navbar() {
             <div className="md:hidden flex justify-start w-full">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="inline-flex items-center justify-center rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
               >
                 {isMenuOpen ? (
                   <X className="block h-6 w-6" aria-hidden="true" />
@@ -79,12 +93,13 @@ export default function Navbar() {
 
         {isMobile && isMenuOpen && (
           <div className="md:hidden">
-            <div className="flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="flex flex-col items-start px-4 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <NavItem
                   key={item.to}
                   to={item.to}
                   onClick={() => setIsMenuOpen(false)}
+                  isMobile={true}
                 >
                   {item.label}
                 </NavItem>
