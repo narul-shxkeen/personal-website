@@ -24,7 +24,7 @@ const Blog = () => {
   
 
   return (
-    <div className="container mx-auto p-4 pt-28">
+    <div className="container mx-auto p-4">
       {selectedPost ? (
         <div className="mb-4 p-4 border rounded-xl shadow bg-slate-100 flex flex-col gap-2 overflow-hidden">
           <h2 className="text-2xl sm:text-4xl poppins-semibold">{selectedPost.title}</h2>
@@ -32,7 +32,7 @@ const Blog = () => {
           <p className="text-sm sm:text-base text-gray-500">{new Date(selectedPost.created_at).toLocaleString()}</p>
           <hr className="relative right-5 w-[110%] border-2"/>
           <p>{selectedPost.blog_data}</p>
-          <button onClick={() => setSelectedPost(null)} className="w-40 mt-4 p-2 bg-[#97bfad] text-white rounded-lg">Back to Posts</button>
+          <button onClick={() => setSelectedPost(null)} className="w-40 mt-4 p-2 bg-[#80a8bd] text-white rounded-lg">Back to Posts</button>
         </div>
       ) : (
         posts.map((post) => (

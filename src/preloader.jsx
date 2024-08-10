@@ -1,25 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import './preloader.css'; // Import the CSS file for dot animations
 
-const Preloader = () => {
-  const [shape, setShape] = useState('circle');
+const GradientInfinityPreloader = () => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShape((prevShape) => (prevShape === 'circle' ? 'square' : 'circle'));
-    }, 1000); // Change shape every second
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    canvas.width = 400; // Increase canvas width
+    canvas.height = 200; // Increase canvas height
 
-    return () => clearInterval(interval);
+    const drawInfinitySymbol = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.moveTo(100, 100); // Adjust starting point
+      ctx.bezierCurveTo(100, 50, 150, 50, 200, 100); // Adjust control points
+      ctx.bezierCurveTo(250, 150, 300, 150, 300, 100); // Adjust control points
+      ctx.bezierCurveTo(300, 50, 250, 50, 200, 100); // Adjust control points
+      ctx.bezierCurveTo(150, 150, 100, 150, 100, 100); // Adjust control points
+      ctx.closePath();
+
+      ctx.strokeStyle = '#3498db';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    };
+
+    const animate = () => {
+      drawInfinitySymbol();
+      requestAnimationFrame(animate);
+    };
+
+    animate();
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div
-        className={`${
-          shape === 'circle' ? 'rounded-full' : ''
-        } w-16 h-16 bg-green-500 transform transition-transform duration-500 ease-in-out animate-flip`}
-      ></div>
+    <div className="preloader-container">
+      <canvas ref={canvasRef} />
+      <div className="loading-dots">
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
     </div>
   );
 };
 
-export default Preloader;
+export default GradientInfinityPreloader;

@@ -7,7 +7,7 @@ import About from "./components/about.jsx";
 import Landing from "./components/homeLanding.jsx";
 import Projects from "./components/projects.jsx";
 import Preloader from './preloader.jsx';
-import Blog from './components/blog/blog.jsx';
+import Blog from './components/blog/blogPage.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true);

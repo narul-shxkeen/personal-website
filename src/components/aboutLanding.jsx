@@ -8,7 +8,7 @@ function Landing(){
  <div className="md:bg-white md:col-span-1 md:row-span-2 h-auto md:h-[100%] w-full flex justify-center items-center rounded-xl">
     <img src="images/squarePfp.jpeg" alt="image of software engineer Vaibhav Shokeen standing on a bridge" className="h-full w-auto rounded-xl object-cover"/></div>
  <div className="bg-white md:col-span-3 md:row-span-2 h-[100%] w-full flex py-4 md:py-0 pl-4 items-center rounded-xl">
-    <h1 className="poppins-bold text-2xl md:text-4xl text-[#b9b9b9] leading-relaxed">Hey there!<br/> I am <br className="md:hidden"/><span className="text-4xl md:text-6xl text-[#97bfad] poppins-bold">Vaibhav Shokeen</span></h1>
+    <h1 className="poppins-bold text-2xl md:text-4xl text-[#b9b9b9] leading-relaxed">Hey there!<br/> I am <br className="md:hidden"/><span className="text-4xl md:text-6xl text-[#3C7278] poppins-bold">Vaibhav Shokeen</span></h1>
     </div>
     <div className="bg-white col-span-4 row-span-3 h-[100%] w-full flex  flex-col gap-3 px-4 py-8 rounded-xl">
         <h3 className="text-[#b9b9b9] poppins-semibold text-2xl md:text-4xl pb-0 mb-0">About Me</h3>

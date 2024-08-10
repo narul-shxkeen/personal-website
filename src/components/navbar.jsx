@@ -8,7 +8,7 @@ const NavItem = ({ to, children, onClick, isMobile }) => (
     className={({ isActive }) =>
       `${
         isActive
-          ? 'text-white bg-[#97bfad]'
+          ? 'text-white bg-[#80a8bd]'
           : 'text-gray-700 hover:text-white hover:bg-gray-700'
       } px-3 py-2 rounded-md text-sm md:text-base transition duration-300 ease-in-out ${isMobile ? 'inline-block' : ''}`
     }
@@ -58,7 +58,7 @@ export default function Navbar() {
     { to: "/about", label: "About" },
     { to: "/projects", label: "Projects" },
     { to: "/resume", label: "Resume" },
-    { to: "/literature", label: "Literature" },
+    // { to: "/literature", label: "Literature" },
     { to: "/blog", label: "Blog" },
   ];
 

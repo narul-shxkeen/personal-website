@@ -5,16 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: { animation: {
-      flip: 'flip 1s infinite',
-    },
-    keyframes: {
-      flip: {
-        '0%, 100%': { transform: 'rotateY(0deg)' },
-        '50%': { transform: 'rotateY(180deg)' },
+    extend: {
+      keyframes: {
+        fall: {
+          '0%': { top: '0px' },
+          '100%': { top: '100vh' },
+        },
+      },
+      animation: {
+        fall: 'fall 5s linear infinite',
       },
     },
-  },
   },
   plugins: [],
 }
