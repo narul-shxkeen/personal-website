@@ -22,7 +22,7 @@ function Landing({ isBlurred }) {
   }, []);
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full overflow-x-hidden">
       <div className="flex flex-col gap-4 justify-center items-center h-[100vh] w-[100vw]">
         <img
           className="absolute -z-10 object-cover h-[100vh] w-[100vw]"
