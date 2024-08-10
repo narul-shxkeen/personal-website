@@ -1,6 +1,5 @@
-import React,{useState, useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./index.css";
 import "./App.css";
 import Navbar from "./components/navbar.jsx";
@@ -23,18 +22,21 @@ function App() {
   }, []);
 
   return (
-    <>
-      {loading && <Preloader />}
-      <Router>
-      <Navbar />
-      <Routes location={location}>
+    <Router>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>
+        </>
+      )}
     </Router>
-    </>
   );
 }
 
