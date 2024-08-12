@@ -32,7 +32,7 @@ function Landing({ isBlurred }) {
         <h1 className="text-4xl sm:text-7xl text-white poppins-bold z-10 text-center px-4 md:px-0">
           Vaibhav Shokeen
         </h1>
-        <p className="relative text-2xl md:text-5xl text-[#b9b9b9] poppins-medium text-center">
+        <p className="relative text-2xl md:text-5xl text-[#b9b9b9] poppins-medium text-center top-6 md:top-0">
           I am a{" "}
           <span className="inline-block w-[450px]">
             <span
