@@ -6,7 +6,7 @@ const BlogPosts = ({ posts }) => {
   return (
     <div className="container mx-auto p-4 pt-28">
       {selectedPost ? (
-        <div className="mb-4 p-4 border rounded shadow bg-slate-100">
+        <div className="mb-4 p-4 border rounded shadow bg-slate-800">
           <h2 className="text-2xl sm:text-4xl poppins-semibold">{selectedPost.title}</h2>
           <h4 className="text-lg sm:text-xl poppins-extralight">{selectedPost.subTitle}</h4>
           <p className="text-sm sm:text-base text-gray-500">{new Date(selectedPost.created_at).toLocaleString()}</p>
@@ -15,7 +15,7 @@ const BlogPosts = ({ posts }) => {
         </div>
       ) : (
         posts.map((post) => (
-          <button key={post.id} onClick={() => setSelectedPost(post)} className="w-full text-left mb-4 p-4 border rounded shadow bg-slate-100">
+          <button key={post.id} onClick={() => setSelectedPost(post)} className="w-full text-left mb-4 p-4 border rounded shadow bg-black">
             <h2 className="text-2xl sm:text-4xl poppins-semibold">{post.title}</h2>
             <h4 className="text-lg sm:text-xl poppins-extralight">{post.subTitle}</h4>
             <p className="text-sm sm:text-base text-gray-500">{new Date(post.created_at).toLocaleString()}</p>

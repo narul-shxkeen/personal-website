@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./index.css";
 import "./App.css";
 import Navbar from "./components/navbar.jsx";
-import About from "./components/about.jsx";
+import About from "./components/about/about.jsx";
 import Landing from "./components/homeLanding.jsx";
-import Projects from "./components/projects.jsx";
+import Projects from "./components/projects/projects.jsx";
+import ClusteringApp from "./components/projects/myProjects/clusteringApp.jsx";
 import Preloader from './preloader.jsx';
 import Blog from './components/blog/blogPage.jsx';
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/clusteringApp" element={<ClusteringApp />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </>
