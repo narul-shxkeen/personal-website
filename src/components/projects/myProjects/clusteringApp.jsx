@@ -20,16 +20,18 @@ function ClusteringApp() {
 </svg>
 ` },
       ]
+      const urls=["https://th.bing.com/th/id/R.c1fe66fbebeb8b2ffedfa2c20ba38f38?rik=0G%2bUUP8QhTAV9Q&riu=http%3a%2f%2fwww.sthda.com%2fsthda%2fRDoc%2ffigure%2fclustering%2fcluster-analysis-in-r-model-based-clustering-2.png&ehk=LqYZPLxEugQJt5t%2b7VwyOCRsVwWG3H4YuX87AYiZjkE%3d&risl=&pid=ImgRaw&r=0","https://th.bing.com/th/id/OIP.PLtIaUZ9kym7oV_X0zIsPQHaFD?w=835&h=570&rs=1&pid=ImgDetMain"]
     return (
         <Page
         title="Clustering App"
         links={links}
         technologies={frameworks}
+        projectImageUrls={urls}
         subtitle="Created an app to identify clusters of instances" 
         text="During my internship at Air Pollution Action Group(A-Pag), I came across a unique problem. My senior was trying to find the most pollution vulnerable points and plot them on google maps, this was in an effort to identify the Most Vulnerable Points(MVPs). They had a dataset containing entries of complaints related to air pollution, for example complaints of illegal dumping of Construction and Demolition(C&D) waste, they would have an unique id of the issue and the latitudes and longitudes of where it was reported.
         From there, they would plot the complaints of Google Maps to find where the clusters are being formed. The logic was that places with most amount of complaints are more vulnerable to cause even more issues going ahead. Eliminating these points would encourage the public to not illegally throw waste here anymore, thus they were important to be identified.
         The problem was that when you plot so many complaints within a small area on the map, while the cluster itself is clearly visible, the data itself isn't very comprehensible. What I propsed in turn was that they could instead find the centroids of these clusters and plot just those, labelling them by the amount of complaints falling in that cluster.
-        This app takes an excel file as input(because the organisation only used excel): the file should contain the unique id of complaints, their latitudes and longitudes. The user can then set the radius for the cluster and also the minimum amount of complaints which they'd like to be in a cluster. It finally outputs the centroids of the clusters and the amount of complaints in each cluster and their unique ID's so the user could indentify the complaints forming the cluster. The user can then plot these centroids on Google Maps to find the MVPs."
+        This app takes an excel file as input(the organisation only used excel): the file should contain the unique id of complaints, their latitudes and longitudes. The user can then set the radius for the cluster and also the minimum amount of complaints which they'd like to be in a cluster. It finally outputs the centroids of the clusters and the amount of complaints in each cluster and their unique ID's so the user could indentify the complaints forming the cluster. The user can then plot these centroids on Google Maps to find the MVPs."
         />
     );
 }
