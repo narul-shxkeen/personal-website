@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 .env
+
+public/images/tech_logos

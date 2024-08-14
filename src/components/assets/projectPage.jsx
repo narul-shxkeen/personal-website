@@ -26,6 +26,16 @@ function Projects(props) {
   return (
     <div className="py-28">
       <div className="mx-6 rounded-xl px-6 py-20 grid grid-cols-1 md:grid-cols-5 bg-white gap-x-9 gap-y-12">
+        {props.coverImage && (
+          <div className="col-span-1 md:col-span-5 mb-6">
+            <img 
+              src={props.coverImage} 
+              alt="Project Cover" 
+              className="w-full h-64 object-cover rounded-xl shadow-md"
+            />
+          </div>
+        )}
+        
         <div className="flex flex-col items-start gap-6 col-span-1 md:col-span-3 row-span-2 w-auto justify-start">
           <h1 className="poppins-semibold text-3xl md:text-6xl text-center md:text-left">
             {props.title}
@@ -61,13 +71,13 @@ function Projects(props) {
           {props.technologies && (
             <div className="flex flex-col gap-3 w-full justify-start items-start">
               <h1 className="poppins-semibold text-lg md:text-xl col-span-1 row-span-2 text-center">
-                Frameworks Used
+                Tools Used
               </h1>
               <div className="flex flex-wrap justify-start w-full gap-6">
                 {props.technologies.map((tech, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center gap-2 bg-[#f7f0f0] p-2 rounded-xl shadow-lg w-[50px] md:w-[90px] hover:bg-[#80a8bd] hover:text-white transition duration-200"
+                    className="flex flex-col items-center gap-2 bg-[#f7f0f0] p-2 rounded-xl shadow-lg w-[90px] hover:bg-[#80a8bd] hover:text-white transition duration-200"
                   >
                     <a
                       href={tech.url}
