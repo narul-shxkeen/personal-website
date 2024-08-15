@@ -4,7 +4,8 @@
 
 body{
   overflow-x: hidden;
-  background-color: #c6f2f7;
+  /* background-color: #374151; */
+  background-color: #0B3954;
   /* background-color: #193E30; */
   /* background: linear-gradient(90deg, hsla(163, 15%, 9%, 1) 0%, hsla(152, 23%, 34%, 1) 100%); */
 }
@@ -16,7 +17,7 @@ body{
   
 }
 .nav{
-  background-color: rgba(255, 255, 255,0.5);
+  background-color: rgba(255, 255, 255,0.8);
 }
 
 .noto-serif-display-hello{

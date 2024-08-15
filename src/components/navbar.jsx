@@ -9,8 +9,8 @@ const NavItem = ({ to, children, onClick, isMobile }) => (
       `${
         isActive
           ? 'text-white bg-[#80a8bd]'
-          : 'text-gray-700 hover:text-white hover:bg-gray-700'
-      } px-3 py-2 rounded-md text-sm md:text-base transition duration-300 ease-in-out ${isMobile ? 'inline-block' : ''}`
+          : 'text-[#011627] hover:text-white hover:bg-gray-700'
+      } poppins-medium px-3 py-2 rounded-md text-sm md:text-base transition duration-300 ease-in-out ${isMobile ? 'inline-block' : ''}`
     }
     onClick={onClick}
   >

@@ -71,7 +71,11 @@ const links=[{name:'Project Link',url:'https://experiment.com/projects/xvgmxaolz
     technologies={frameworks}
     coverImage=""
     subtitle="Developed a cost effective and automated diagnostic tool for a prevalent disease in Africa"
-    text="will add some"/>
+    text="Schistosomiases is an acute disease caused by blood flukes which primarily transmits when a person comes in contact with contaminated water. It's highly prevalent in tropical and subtropical areas and especially in poor communties which lack access to safe drinking water. Almost 90% of the patients requiring treatment live in Africa.
+    While the scale of the problem is massive, my team(including 3 Bioengineering PHDs from Stanford) focused on the diagnosis aspect of the issue. Since the disease largely impacts poor communities, the diagnosis should ideally be an accurate test with high cost efficiency. The problem with the already existing processes were as follows:
+    1. The affordable tests(costing $1-2) had very low accuracy at around 52%
+    2. The tests with high accuracy cannot be afforded(costing $70-100) by the people who are truly affected by the disease
+    Thus the technology was not really accessible, getting the cheaper test done is as good as flipping a coin to guess whether one is infected or not"/>
     </>
 }
 
