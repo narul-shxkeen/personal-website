@@ -30,7 +30,7 @@ const Blog = () => {
           <h2 className="text-2xl sm:text-4xl poppins-semibold text-[#574B60]">{selectedPost.title}</h2>
           <h4 className="text-lg sm:text-xl poppins-extralight text-[#574B60]">{selectedPost.subTitle}</h4>
           <p className="text-base sm:text-lg text-[#574B60]">{new Date(selectedPost.created_at).toLocaleString()}</p>
-          <hr className="relative right-5 w-[110%] border-2"/>
+          <hr className="relative right-5 w-[110%] border-1 border-[#011627]"/>
           <p className='poppins-light text-sm md:text-base text-[#574B60]'>{selectedPost.blog_data}</p>
           <button onClick={() => setSelectedPost(null)} className="w-40 mt-4 p-2 bg-[#80a8bd] text-white rounded-lg">Back to Posts</button>
         </div>

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+} 
+
 body{
   overflow-x: hidden;
   /* background-color: #374151; */
