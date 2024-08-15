@@ -1,15 +1,28 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
-//import { loadFull } from "tsparticles"; // loads tsparticles
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useEffect, useState } from "react";
 
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
 // tsParticles Website: https://particles.js.org/
 const ParticlesComponent = (props) => {
-  // using useMemo is not mandatory, but it's recommended since this value can be memoized if static
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mediaQuery.matches);
+
+    const handleMediaChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
+
   const options = useMemo(() => {
-    // using an empty options object will load the default options, which are static particles with no background and 3px radius, opacity 100%, white color
-    // all options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
     return {
       background: {
         color: "#0B3954", // this sets a background color for the canvas
@@ -39,10 +52,10 @@ const ParticlesComponent = (props) => {
         },
       },
       particles: {
-        number:{value:60},
+        number: { value: isMobile ? 20 : 80 }, // Set 20 particles for mobile, 80 otherwise
         links: {
           enable: true, // enabling this will make particles linked together
-          distance: 200, // maximum distance for linking the particles
+          distance: 100, // maximum distance for linking the particles
         },
         move: {
           enable: true, // enabling this will make particles move in the canvas
@@ -56,15 +69,12 @@ const ParticlesComponent = (props) => {
         },
       },
     };
-  }, []);
+  }, [isMobile]);
 
-  // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
   const particlesInit = useCallback((engine) => {
     loadSlim(engine);
-    // loadFull(engine); // for this sample the slim version is enough, choose whatever you prefer, slim is smaller in size but doesn't have all the plugins and the mouse trail feature
   }, []);
 
-  // setting an id can be useful for identifying the right particles component, this is useful for multiple instances or reusable components
   return <Particles id={props.id} init={particlesInit} options={options} />;
 };
 

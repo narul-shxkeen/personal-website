@@ -6,6 +6,7 @@ import Navbar from "./components/navbar.jsx";
 import About from "./components/about/about.jsx";
 import Landing from "./components/homeLanding.jsx";
 import Projects from "./components/projects/projects.jsx";
+import Resume from "./components/resume/resume.jsx";
 import ClusteringApp from "./components/projects/myProjects/clusteringApp.jsx";
 import Diagnosis from "./components/projects/myProjects/diagnosis.jsx";
 import Preloader from './preloader.jsx';
@@ -38,6 +39,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/clusteringApp" element={<ClusteringApp />} />
               <Route path="/projects/diagnosis" element={<Diagnosis />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/blog" element={<Blog />} />
             </Routes>
           </div>
