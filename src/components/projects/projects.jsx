@@ -4,7 +4,7 @@ import Particles from "../../particles.jsx"
 
 function Projects() {
 
-return <div className="pt-20"><Particles addParticles={false}/> <div className="bg-slate-50 flex flex-col md:mt-28 mx-4 md:mx-4 rounded-xl py-10 mb-10 md:py-8 px-4 gap-6">
+return <div className="pt-9"><Particles addParticles={false}/> <div className="bg-slate-50 flex flex-col md:mt-20 mx-4 md:mx-4 rounded-xl py-10 mb-10 md:py-8 px-4 gap-6">
 <h1 className="poppins-bold text-2xl md:text-4xl text-center text-[#7BA2B6]">Projects</h1>
 <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-items-center items-center gap-10">
 <ProjectCard
