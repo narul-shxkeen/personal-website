@@ -3,6 +3,7 @@ import "../App.css";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import ParticleBackground from '../particles.jsx';
 
 function Landing({ isBlurred }) {
   const roles = ["Developer", "Machine Learner", "Health Researcher"];
@@ -23,11 +24,12 @@ function Landing({ isBlurred }) {
 
   return (
     <div className="h-full w-full overflow-x-hidden">
+      <ParticleBackground id="particles"/>
       <div className="flex flex-col gap-4 justify-center items-center h-[100vh] w-[100vw]">
         <img
-          className="absolute -z-10 object-cover h-[100vh] w-[100vw]"
-          // src="https://th.bing.com/th/id/OIP.hq8yhSmz3mqt54MMYd7IRwAAAA?rs=1&pid=ImgDetMain"
-        src="https://images.unsplash.com/photo-1564577159764-54b5d18f1096?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="object-cover h-[30vh] md:h-[40vh] w-auto rounded-full bg-slate-100 p-3"
+          src="/images/vaibhavFace.png"
+        // src="https://images.unsplash.com/photo-1564577159764-54b5d18f1096?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="image of raindrops on a leaf with a blurred background"
         />
         <h1 className="text-4xl sm:text-7xl text-white poppins-bold z-10 text-center px-4 md:px-0">

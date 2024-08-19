@@ -25,18 +25,18 @@ function Projects(props) {
 
   return (
     <div className="py-28">
-      <div className="mx-6 rounded-xl px-6 py-20 grid grid-cols-1 md:grid-cols-5 bg-white gap-x-9 gap-y-12">
+      <div className="mx-6 rounded-xl  bg-white">
         {props.coverImage && (
-          <div className="col-span-1 md:col-span-5 mb-6">
+          <div className="col-span-1 md:col-span-5 mb-6 w-full mx-auto">
             <img 
               src={props.coverImage} 
               alt="Project Cover" 
-              className="w-full h-64 object-cover rounded-xl shadow-md"
+              className="w-full h-36 md:h-80 object-cover rounded-t-xl shadow-md"
             />
           </div>
         )}
-        
-        <div className="flex flex-col items-start gap-6 col-span-1 md:col-span-3 row-span-2 w-auto justify-start">
+        <div className="mx-6 rounded-xl py-20 grid grid-cols-1 md:grid-cols-6 bg-white gap-x-9 gap-y-12 px-6">
+        <div className="flex flex-col items-start gap-6 col-span-1 md:col-span-4 row-span-2 w-auto justify-start">
           <h1 className="poppins-semibold text-3xl md:text-6xl text-center md:text-left">
             {props.title}
           </h1>
@@ -96,7 +96,7 @@ function Projects(props) {
             </div>
           )}
         </div>
-        <div className="col-span-1 md:col-span-5">
+        <div className="col-span-1 md:col-span-6">
           {paragraphs.map((paragraph, index) => (
             <p
               key={index}
@@ -227,6 +227,7 @@ function Projects(props) {
             )}
           </div>
         )}
+      </div>
       </div>
     </div>
   );

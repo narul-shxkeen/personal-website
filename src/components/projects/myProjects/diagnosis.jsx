@@ -65,17 +65,22 @@ function Diagnosis(){
 	c-1.2,1.1-2.1,2.6-3,4c-1.1,1.6-2.2,3.1-3.4,4.6c-2.4,2.9-5.2,5.5-8.4,7.5c-5.5,3.3-10.5,4.9-16.5,1.9c-4.4-3.5-2.9-7.7,0.7-11.1
 	c6.3-5.8,13.8-9.9,19.7-16.1c5.6-5.9,10.5-13.2,11.6-21.3c`}]
 const links=[{name:'Project Link',url:'https://experiment.com/projects/xvgmxaolzqgrkvyotnid'}]
+const urls=["https://healthjade.net/wp-content/uploads/2018/10/schistosomiasis.jpg","https://th.bing.com/th/id/R.c1098979b9162ea163348ea46c9ee622?rik=T82%2bIEd0N9dMAw&riu=http%3a%2f%2fupload.medbullets.com%2ftopic%2f121847%2fimages%2ffighaematobium.jpg&ehk=f%2b8%2bUnXyLbpIxUJzyga6lK7jDvIr907xsGtJEWqiMHw%3d&risl=&pid=ImgRaw&r=0","/images/diagnosis/2.bmp","/images/diagnosis/3.bmp","/images/diagnosis/1.png"]
     return <>
-    <Page title="Developing a low-cost, rapid diagnostic for urogenital Schistosomiasis infection"
+    <Page title="A low-cost, rapid diagnosis for urogenital Schistosomiasis infection"
     links={links}
     technologies={frameworks}
-    coverImage=""
+	projectImageUrls={urls}
+    coverImage="/images/diagnosis/1.png"
     subtitle="Developed a cost effective and automated diagnostic tool for a prevalent disease in Africa"
     text="Schistosomiases is an acute disease caused by blood flukes which primarily transmits when a person comes in contact with contaminated water. It's highly prevalent in tropical and subtropical areas and especially in poor communties which lack access to safe drinking water. Almost 90% of the patients requiring treatment live in Africa.
     While the scale of the problem is massive, my team(including 3 Bioengineering PHDs from Stanford) focused on the diagnosis aspect of the issue. Since the disease largely impacts poor communities, the diagnosis should ideally be an accurate test with high cost efficiency. The problem with the already existing processes were as follows:
     1. The affordable tests(costing $1-2) had very low accuracy at around 52%
     2. The tests with high accuracy cannot be afforded(costing $70-100) by the people who are truly affected by the disease
-    Thus the technology was not really accessible, getting the cheaper test done is as good as flipping a coin to guess whether one is infected or not"/>
+    Thus the technology was not really accessible, getting the cheaper test done is as good as flipping a coin to guess whether one is infected or not. We tried to tackle this problem by creating an automated diagnosis tool, so that instead of having a pathologist look at the urine samples we would record a video of the sample passing through the Planktoscope and then use a machine learning model to identify whether the subject is infected or not. While I did not have expertise in biology, I created the model using my team's help. This was a truly memorable experience as my teammates who had access to the microscope would upload the videos and images on drive, after this we would collectively label them on Roboflow before I finally used the dataset to develop the model.
+	We created and successfully tested the prototype which showed promising results with high precision and accuracy. The project was still not at a stage where we could deploy it because we did not have access to live samples to train the model, my team had used stored eggs and water to create the test samples. While they were excellent in helping us make the proof of concept, they were not enough to guarantee they model's accuracy.
+	We then applied for a research grant to further work on the project and bring it to life. Fortunately we were awarded a $10,000 grant by The Experiment Foundation.
+	Currently, we are planning on doing a field visit and implementing the project in Senegal. "/>
     </>
 }
 

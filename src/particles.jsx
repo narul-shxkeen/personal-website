@@ -1,10 +1,8 @@
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
+import { loadSlim } from "tsparticles-slim";
 import { useCallback, useMemo, useEffect, useState } from "react";
 
-// tsParticles Repository: https://github.com/matteobruni/tsparticles
-// tsParticles Website: https://particles.js.org/
-const ParticlesComponent = (props) => {
+const ParticlesComponent = ({ id, addParticles = true }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -25,57 +23,58 @@ const ParticlesComponent = (props) => {
   const options = useMemo(() => {
     return {
       background: {
-        color: "#0B3954", // this sets a background color for the canvas
+        color: "#0B3954",
       },
       fullScreen: {
-        enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
-        zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
+        enable: true,
+        zIndex: -1,
       },
       interactivity: {
         events: {
           onClick: {
-            enable: true, // enables the click event
-            mode: "push", // adds the particles on click
+            enable: addParticles, // Enable click event based on addParticles prop
+            mode: "push",
+            check: (event) => event.target.tagName === "CANVAS",
           },
           onHover: {
-            enable: true, // enables the hover event
-            mode: "repulse", // make the particles run away from the cursor
+            enable: true,
+            mode: "repulse",
           },
         },
         modes: {
           push: {
-            quantity: 10, // number of particles to add on click
+            quantity: isMobile ? 2 : 10,
           },
           repulse: {
-            distance: 100, // distance of the particles from the cursor
+            distance: 100,
           },
         },
       },
       particles: {
-        number: { value: isMobile ? 20 : 80 }, // Set 20 particles for mobile, 80 otherwise
+        number: { value: isMobile ? 20 : 80 },
         links: {
-          enable: true, // enabling this will make particles linked together
-          distance: 100, // maximum distance for linking the particles
+          enable: true,
+          distance: 100,
         },
         move: {
-          enable: true, // enabling this will make particles move in the canvas
-          speed: { min: 1, max: 5 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
+          enable: true,
+          speed: { min: 1, max: 5 },
         },
         opacity: {
-          value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
+          value: { min: 0.3, max: 0.7 },
         },
         size: {
-          value: { min: 1, max: 3 }, // let's randomize the particles size a bit
+          value: { min: 1, max: 3 },
         },
       },
     };
-  }, [isMobile]);
+  }, [isMobile, addParticles]);
 
   const particlesInit = useCallback((engine) => {
     loadSlim(engine);
   }, []);
 
-  return <Particles id={props.id} init={particlesInit} options={options} />;
+  return <Particles id={id} init={particlesInit} options={options} />;
 };
 
 export default ParticlesComponent;

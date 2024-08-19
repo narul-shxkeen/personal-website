@@ -13,7 +13,7 @@ function Landing(){
     <div className="bg-white col-span-4 row-span-3 h-auto w-full flex  flex-col gap-3 px-4 py-8 rounded-xl">
         <h3 className="text-[#b9b9b9] poppins-semibold text-2xl md:text-4xl pb-0 mb-0">About Me</h3>
         <p className="poppins-regular text-base text-[#574B60] mt-4">   
-            I am an aspiring <span className="poppins-semibold">Computational Physicist</span> currently enrolled in Ashoka University batch of 2026.<br/><br/> My past experiences have been in areas related to healthcare, air pollution, and teaching to name a few. In terms of technical skills my proficiency lies in web development, Computer Vision, Machine Learning, Data Analysis, and scientific communication. 
+            I am an aspiring <span className="poppins-semibold">Computational Physicist</span> currently enrolled in Ashoka University batch of 2025.<br/><br/> My past experiences have been in areas related to healthcare, air pollution, and teaching to name a few. In terms of technical skills my proficiency lies in web development, Computer Vision, Machine Learning, Data Analysis, and scientific communication. 
             To sum it up, I am passionate about using my technical skills to solve real-world problems which directly affect the lives of people facing them.
            <br/><br/> I also try to actively read in whatever free time I get, Dostoyevsky and Camus being my current favourites. I am part of the university team as a 10-meter Pistol Shooter.<br/><br/>   
            </p>

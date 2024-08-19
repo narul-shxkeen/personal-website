@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function ActionAreaCard(props) {
   return (
     <Link to={props.link} className='group'>
-      <Card sx={{ maxWidth: 300 }} className='w-[300px] h-[330px] group'>
+      <Card sx={{ maxWidth: 300 }} className='w-[300px] h-[340px] group'>
         <CardActionArea>
           <CardMedia
             className='h-[200px] w-full object-cover group-hover:hidden'
@@ -18,7 +18,7 @@ export default function ActionAreaCard(props) {
             alt={props.alt}
           />
           <CardContent
-            className='group-hover:bg-[#80a8bd] group-hover:text-white text-[#574B60] transition duration-300 relative group-hover:w-[300px] group-hover:h-[330px] group-hover:flex group-hover:flex-col group-hover:justify-center'
+            className='group-hover:bg-[#80a8bd] py-3 group-hover:text-white text-[#574B60] transition duration-300 relative group-hover:w-[300px] group-hover:h-[340px] group-hover:flex group-hover:flex-col group-hover:justify-center'
             sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }} // Apply font family and weight here
           >
             <Typography
