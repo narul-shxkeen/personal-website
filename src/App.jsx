@@ -4,7 +4,7 @@ import "./index.css";
 import "./App.css";
 import Navbar from "./components/navbar.jsx";
 import About from "./components/about/about.jsx";
-import Landing from "./components/homeLanding.jsx";
+import Landing from "./components/home/homelanding.jsx";
 import Projects from "./components/projects/projects.jsx";
 import Resume from "./components/resume/resume.jsx";
 import ClusteringApp from "./components/projects/myProjects/clusteringApp.jsx";

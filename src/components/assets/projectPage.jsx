@@ -35,9 +35,9 @@ function Projects(props) {
             />
           </div>
         )}
-        <div className="mx-6 rounded-xl py-20 grid grid-cols-1 md:grid-cols-6 bg-white gap-x-9 gap-y-12 px-6">
+        <div className="mx-6 rounded-xl py-20 grid grid-cols-1 md:grid-cols-6 bg-white gap-x-9 gap-y-12 px-1 md:px-6">
         <div className="flex flex-col items-start gap-6 col-span-1 md:col-span-4 row-span-2 w-auto justify-start">
-          <h1 className="poppins-semibold text-3xl md:text-6xl text-center md:text-left">
+          <h1 className="poppins-semibold text-3xl md:text-6xl text-left">
             {props.title}
           </h1>
           <p className="poppins-light md:text-xl text-lg">{props.subtitle}</p>

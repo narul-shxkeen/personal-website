@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <div className="py-28">
       <Particles addParticles={false}/>
-      <div className="bg-white h-auto w-[70vw] mx-auto rounded-xl p-8">
+      <div className="bg-white h-auto w-[100vw] md:w-[70vw] mx-auto md:rounded-xl px-2 py-4 md:p-8">
         <div className="max-w-4xl mx-auto">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-[#574B60] mb-2">Vaibhav Shokeen</h1>
