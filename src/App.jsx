@@ -13,6 +13,17 @@ import PWD from "./components/projects/myProjects/pwd.jsx";
 import SmartSolutions from "./components/projects/myProjects/smartSolutions.jsx";
 import Preloader from './preloader.jsx';
 import Blog from './components/blog/blogPage.jsx';
+import withSlideIn from "./transition.jsx";
+
+const SlideInLanding = withSlideIn(Landing);
+const SlideInAbout = withSlideIn(About);
+const SlideInProjects = withSlideIn(Projects);
+const SlideInClusteringApp = withSlideIn(ClusteringApp);
+const SlideInDiagnosis = withSlideIn(Diagnosis);
+const SlideInPWD = withSlideIn(PWD);
+const SlideInSmartSolutions = withSlideIn(SmartSolutions);
+const SlideInResume = withSlideIn(Resume);
+const SlideInBlog = withSlideIn(Blog);
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,15 +46,15 @@ function App() {
           <div className="content">
             <Navbar />
             <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/clusteringApp" element={<ClusteringApp />} />
-              <Route path="/projects/diagnosis" element={<Diagnosis />} />
-              <Route path="/projects/C&D_violation" element={<PWD />} />
-              <Route path="/projects/smartsolutions" element={<SmartSolutions />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/blog" element={<Blog />} />
+            <Route path="/" element={<SlideInLanding />} />
+              <Route path="/about" element={<SlideInAbout />} />
+              <Route path="/projects" element={<SlideInProjects />} />
+              <Route path="/projects/clusteringApp" element={<SlideInClusteringApp />} />
+              <Route path="/projects/diagnosis" element={<SlideInDiagnosis />} />
+              <Route path="/projects/C&D_violation" element={<SlideInPWD />} />
+              <Route path="/projects/smartsolutions" element={<SlideInSmartSolutions />} />
+              <Route path="/resume" element={<SlideInResume />} />
+              <Route path="/blog" element={<SlideInBlog />} />
             </Routes>
           </div>
         </>
