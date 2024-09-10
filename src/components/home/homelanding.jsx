@@ -29,8 +29,7 @@ function Landing({ isBlurred }) {
         <img
           className="object-cover h-[30vh] md:h-[40vh] w-auto rounded-full bg-slate-100 p-3"
           src="/images/vaibhavFace.png"
-        // src="https://images.unsplash.com/photo-1564577159764-54b5d18f1096?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="image of raindrops on a leaf with a blurred background"
+        alt="image of raindrops on a leaf with a blurred background"
         />
         <h1 className="text-4xl sm:text-7xl text-white poppins-bold z-10 text-center px-4 md:px-0">
           Vaibhav Shokeen

@@ -65,7 +65,7 @@ function Diagnosis(){
 	c-1.2,1.1-2.1,2.6-3,4c-1.1,1.6-2.2,3.1-3.4,4.6c-2.4,2.9-5.2,5.5-8.4,7.5c-5.5,3.3-10.5,4.9-16.5,1.9c-4.4-3.5-2.9-7.7,0.7-11.1
 	c6.3-5.8,13.8-9.9,19.7-16.1c5.6-5.9,10.5-13.2,11.6-21.3c`}]
 const links=[{name:'Project Link',url:'https://experiment.com/projects/xvgmxaolzqgrkvyotnid'}]
-const urls=["https://healthjade.net/wp-content/uploads/2018/10/schistosomiasis.jpg","https://th.bing.com/th/id/R.c1098979b9162ea163348ea46c9ee622?rik=T82%2bIEd0N9dMAw&riu=http%3a%2f%2fupload.medbullets.com%2ftopic%2f121847%2fimages%2ffighaematobium.jpg&ehk=f%2b8%2bUnXyLbpIxUJzyga6lK7jDvIr907xsGtJEWqiMHw%3d&risl=&pid=ImgRaw&r=0","/images/diagnosis/2.bmp","/images/diagnosis/3.bmp","/images/diagnosis/1.png"]
+const urls=["https://healthjade.net/wp-content/uploads/2018/10/schistosomiasis.jpg","https://th.bing.com/th/id/R.c1098979b9162ea163348ea46c9ee622?rik=T82%2bIEd0N9dMAw&riu=http%3a%2f%2fupload.medbullets.com%2ftopic%2f121847%2fimages%2ffighaematobium.jpg&ehk=f%2b8%2bUnXyLbpIxUJzyga6lK7jDvIr907xsGtJEWqiMHw%3d&risl=&pid=ImgRaw&r=0","/images/diagnosis/1.png"]
     return <>
     <Page title="A low-cost, rapid diagnosis for urogenital Schistosomiasis infection"
     links={links}
