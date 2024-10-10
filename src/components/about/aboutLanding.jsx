@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function Landing() {
   return (
     <div className="h-auto w-[100vw] mb-20 flex flex-col md:grid md:grid-cols-4 md:grid-rows-5 md:justify-items-center justify-center items-center pt-28 md:px-20 px-6 rounded-xl">
-      <div className="bg-white md:col-span-3 md:row-span-2 h-[100%] w-full flex md:py-0 pl-4 items-center rounded-tl-xl">
+      <div className="bg-white md:col-span-3 md:row-span-2 h-[100%] w-full flex md:py-0 pl-4 items-center rounded-t-xl md:rounded-tl-xl">
         <h1 className="poppins-bold text-2xl md:text-4xl text-[#574B60] leading-relaxed">
           Hey there!
           <br /> I am <br className="md:hidden" />
@@ -17,7 +17,7 @@ function Landing() {
         </h1>
         
       </div>
-      <div className="flex flex-wrap justify-center items-center bg-white col-span-1 row-span-2 gap-4 relative h-full w-full rounded-tr-xl">
+      <div className="flex flex-wrap justify-center items-center bg-white col-span-1 row-span-2 gap-4 relative h-full w-full rounded-none md:rounded-tr-xl">
         <a
           href="mailto:shokeenvaibhav280@gmail.com"
           title="Mail Me"
