@@ -22,7 +22,7 @@ function Landing({ isBlurred }) {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return (<div>
     <div className="h-full w-full overflow-x-hidden">
       <ParticleBackground id="particles"/>
       <div className="flex flex-col gap-4 justify-center items-center h-[100vh] w-[100vw]">
@@ -74,7 +74,7 @@ function Landing({ isBlurred }) {
         </div>
       </div>
     </div>
-  );
+    </div>  );
 }
 
 export default Landing;
